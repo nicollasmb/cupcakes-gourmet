@@ -13,6 +13,9 @@ $cores = ['recebido' => 'primary', 'em_preparo' => 'warning', 'saiu_para_entrega
             </div>
             <div class="small text-muted">
                 <?= limpaTexto(Pedido::ENTREGAS[$pedido['tipo_entrega']]) ?> · <?= limpaTexto(Pedido::PAGAMENTOS[$pedido['forma_pagamento']]) ?>
+                <?php if ($pedido['forma_pagamento'] === 'dinheiro' && !empty($pedido['troco_para'])): ?>
+                    · Troco para <?= formataMoeda((float) $pedido['troco_para']) ?>
+                <?php endif; ?>
             </div>
         </div>
         <?php if ($pedido['endereco_entrega']): ?>
