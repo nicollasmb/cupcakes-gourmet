@@ -16,17 +16,21 @@
 
         <div class="card shadow-sm"><div class="card-body">
             <h2 class="h6">Atualizar status</h2>
-            <form method="post" action="index.php?r=admin/pedidoStatus" class="d-flex gap-2">
-                <?= Csrf::campo() ?>
-                <input type="hidden" name="id" value="<?= (int) $pedido['id'] ?>">
-                <select name="status" class="form-select" aria-label="Novo status">
-                    <?php foreach (Pedido::statusPermitidos($pedido) as $valor => $rotulo): ?>
-                        <option value="<?= $valor ?>" <?= $pedido['status'] === $valor ? 'selected' : '' ?>><?= limpaTexto($rotulo) ?></option>
-                    <?php endforeach; ?>
-                </select>
-                <button class="btn btn-primary">Salvar</button>
-            </form>
-            <p class="small text-muted mt-2 mb-0">Cancelar devolve os itens ao estoque.</p>
+            <?php if (in_array($pedido['status'], Pedido::STATUS_FINAIS, true)): ?>
+                <p class="text-muted small mb-0">Pedido finalizado — o status não pode mais ser alterado.</p>
+            <?php else: ?>
+                <form method="post" action="index.php?r=admin/pedidoStatus" class="d-flex gap-2">
+                    <?= Csrf::campo() ?>
+                    <input type="hidden" name="id" value="<?= (int) $pedido['id'] ?>">
+                    <select name="status" class="form-select" aria-label="Novo status">
+                        <?php foreach (Pedido::statusPermitidos($pedido) as $valor => $rotulo): ?>
+                            <option value="<?= $valor ?>" <?= $pedido['status'] === $valor ? 'selected' : '' ?>><?= limpaTexto($rotulo) ?></option>
+                        <?php endforeach; ?>
+                    </select>
+                    <button class="btn btn-primary">Salvar</button>
+                </form>
+                <p class="small text-muted mt-2 mb-0">Cancelar devolve os itens ao estoque.</p>
+            <?php endif; ?>
         </div></div>
     </div>
 </div>

@@ -71,7 +71,8 @@ $msg = fn(string $n) => isset($erros[$n]) ? '<div class="invalid-feedback d-bloc
             <?php endforeach; ?>
             <div class="mt-2" id="bloco-troco" style="display: none;">
                 <label for="troco_para" class="form-label small">Precisa de troco para quanto? (opcional)</label>
-                <input type="text" id="troco_para" name="troco_para" placeholder="Ex: 50,00" class="form-control form-control-sm" style="max-width: 160px;" value="<?= $campo('troco_para') ?>">
+                <input type="text" id="troco_para" name="troco_para" placeholder="Ex: 50,00" class="form-control form-control-sm<?= $invalido('troco_para') ?>" style="max-width: 160px;" value="<?= $campo('troco_para') ?>">
+                <?= $msg('troco_para') ?>
             </div>
             <?= $msg('forma_pagamento') ?>
             <p class="small text-muted mt-2 mb-0">O pagamento é feito na entrega/retirada. A chave PIX aparece após a confirmação.</p>

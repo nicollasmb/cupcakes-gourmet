@@ -128,6 +128,12 @@ class Pedido
             $taxa = $d['tipo_entrega'] === 'entrega' ? $this->taxaEntrega : 0.0;
             $total = round($subtotal + $taxa, 2);
 
+            if ($d['troco_para'] !== null && $d['troco_para'] < $total) {
+                throw new ValidacaoException([
+                    'troco_para' => 'O valor para troco deve ser maior que o total do pedido (' . formataMoeda($total) . ').'
+                ]);
+            }
+
             $clienteId = $this->salvarCliente($d);
 
             $st = $this->db->prepare(
@@ -228,6 +234,9 @@ class Pedido
         }
         if (!array_key_exists($novoStatus, self::statusPermitidos($pedido))) {
             throw new ValidacaoException(['status' => 'Status inválido para este pedido.']);
+        }
+        if (in_array($pedido['status'], self::STATUS_FINAIS, true)) {
+            throw new ValidacaoException(['status' => 'Pedidos entregues ou cancelados não podem mudar de status.']);
         }
         if ($novoStatus === $pedido['status']) {
             return;
