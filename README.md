@@ -13,8 +13,16 @@ Projeto Integrador Transdisciplinar em Engenharia de Software II — Nicollas Mo
 | Testes | PHPUnit 10 (testes automatizados) |
 | Modo de codificação | Tradicional |
 
-**Solução em funcionamento:**
-**Vídeo de apresentação:**
+---
+
+## 🎥 Vídeos Demonstrativos 
+
+**ATENÇÃO AVALIADOR**
+- Após enviar o PDF do relatório na plataforma, verifiquei que o link dos vídeos não ficou funcional no PDF, enquanto eu fazia eles pelo Google Docs eles ficaram funcionais, mas na hora de exportar para PDF eles quebraram, então peço que acesse os vídeos por aqui
+> 📌 **Apresentação Geral:** [Assistir ao Vídeo de Apresentação](https://acadcruzeirodosul-my.sharepoint.com/:v:/g/personal/nicollas_borges_cs_cruzeirodosul_edu_br/IQDrUGnkUJGERbt-BbvbptILAdnk44k0-CsQz4Gv9NAZWic?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=gjjJP5)  
+> 🛠️ **Correção de Bugs:** [Assistir ao Vídeo de Correção de Bugs](https://acadcruzeirodosul-my.sharepoint.com/:v:/g/personal/nicollas_borges_cs_cruzeirodosul_edu_br/IQB4GTbJZ0K_RL3wG4PRjvW8AV7QmtaHXMyEGPuWfvBS_yY?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=tgQa1u)  
+
+---
 
 ## Funcionalidades
 
@@ -71,3 +79,4 @@ docs/                  Documentação do projeto (situações 1, 2 e 3)
 - [Manual de uso](docs/2-manual-de-uso.md)
 - [Plano e resultados de testes](docs/3-testes/plano-de-testes.md)
 - [Laudo de qualidade](docs/3-testes/laudo-de-qualidade.md)
+- [Vídeos de demonstração (Apresentação geral e Correção de bugs)](docs/4-videos.md)
