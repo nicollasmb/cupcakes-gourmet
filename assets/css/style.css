@@ -1,0 +1,14 @@
+:root { --cupcake: #b83b5e; --cupcake-escuro: #8e2c48; --creme: #fff7f0; }
+body { background: var(--creme); }
+.bg-cupcake { background: var(--cupcake); }
+.btn-primary { --bs-btn-bg: var(--cupcake); --bs-btn-border-color: var(--cupcake);
+  --bs-btn-hover-bg: var(--cupcake-escuro); --bs-btn-hover-border-color: var(--cupcake-escuro);
+  --bs-btn-active-bg: var(--cupcake-escuro); --bs-btn-disabled-bg: #c98a9c; --bs-btn-disabled-border-color: #c98a9c; }
+.btn-outline-primary { --bs-btn-color: var(--cupcake); --bs-btn-border-color: var(--cupcake);
+  --bs-btn-hover-bg: var(--cupcake); --bs-btn-hover-border-color: var(--cupcake); }
+a { color: var(--cupcake-escuro); }
+.hero { background: linear-gradient(135deg, #f9d5e5 0%, #fde2c8 100%); }
+.emoji-cupcake { font-size: 4.5rem; text-align: center; padding: 1.25rem 0; background: #fdeef3; }
+.card-cupcake { border: 0; transition: transform .15s ease; }
+.card-cupcake:hover { transform: translateY(-3px); }
+.preco { color: var(--cupcake-escuro); }
